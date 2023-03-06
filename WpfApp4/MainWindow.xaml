@@ -1,0 +1,81 @@
+﻿<Window x:Class="WpfApp4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4"
+        mc:Ignorable="d"
+        Title="Calculator" Height="600" Width="400">
+    <Grid Background= "#f0f0f0" >
+        <Grid Background="#e6e6e6" Height="376" Margin="0,184,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition>
+                </RowDefinition>
+                <RowDefinition Height="1*" ></RowDefinition>
+                <RowDefinition Height="1*" ></RowDefinition>
+                <RowDefinition Height="1*" ></RowDefinition>
+                <RowDefinition Height="1*" ></RowDefinition>
+                <RowDefinition Height="1*" ></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Grid.Column="0" Grid.Row="4" Margin="2,2" Content="1" Name="btn1" FontSize="28" FontWeight="SemiBold" Background="#fafafa" BorderBrush="#fafafa" Click="Button_Click" ></Button>
+            <Button Grid.Column="0" Grid.Row="3" Margin="2,2" Content="4" Name="btn4" FontSize="26" FontWeight="SemiBold"  Background="#fafafa" BorderBrush="#fafafa" Click="Button_Click" ></Button>
+            <Button Grid.Column="0" Grid.Row="2" Margin="2,2" Content="7" Name="btn7" FontSize="26" FontWeight="SemiBold"  Background="#fafafa" BorderBrush="#fafafa" Click="Button_Click" ></Button>
+            <Button Grid.Column="1" Grid.Row="4" Margin="2,2" Content="2" Name="btn2" FontSize="26" FontWeight="SemiBold"  Background="#fafafa" BorderBrush="#fafafa" Click="Button_Click" ></Button>
+            <Button Grid.Column="1" Grid.Row="3" Margin="2,2" Content="5" Name="btn5" FontSize="26" FontWeight="SemiBold"  Background="#fafafa" BorderBrush="#fafafa" Click="Button_Click" ></Button>
+            <Button Grid.Column="1" Grid.Row="2" Margin="2,2" Content="8" Name="btn8" FontSize="26" FontWeight="SemiBold"  Background="#fafafa" BorderBrush="#fafafa" Click="Button_Click" ></Button>
+            <Button Grid.Column="2" Grid.Row="4" Margin="2,2" Content="3" Name="btn3" FontSize="26" FontWeight="SemiBold"  Background="#fafafa" BorderBrush="#fafafa" Click="Button_Click" ></Button>
+            <Button Grid.Column="2" Grid.Row="3" Margin="2,2" Content="6" Name="btn6" FontSize="26" FontWeight="SemiBold"  Background="#fafafa" BorderBrush="#fafafa" Click="Button_Click" ></Button>
+            <Button Grid.Column="2" Grid.Row="2" Margin="2,2" Content="9" Name="btn9" FontSize="26" FontWeight="SemiBold"  Background="#fafafa" BorderBrush="#fafafa" Click="Button_Click" ></Button>
+            <Button Grid.Column="1" Grid.Row="6" Margin="2,2" Content="0" Name="btn0" FontSize="26" FontWeight="SemiBold" Background="#fafafa" BorderBrush="#fafafa" Click="Button_Click" ></Button>
+            <Button Grid.Column="0" Grid.Row="6" Margin="2,2" Content ="±" FontSize="26" FontWeight="Light" Background= "#f0f0f0" BorderBrush="#f0f0f0" Click="Button_Click_1" ></Button>
+            <Button Grid.Column="3" Grid.Row="6" Margin="2,2" Content="=" Name="btn11" FontSize="26" FontWeight="Light"  Background= "#f0f0f0" BorderBrush="#f0f0f0" Click="Button_Click"></Button>
+            <Button Grid.Column="2" Grid.Row="6" Margin="2,2" Content="," Name="btn12" FontSize="26" FontWeight="SemiBold" Background= "#f0f0f0" BorderBrush="#f0f0f0" Click="Button_Click"></Button>
+            <Button Grid.Column="3" Grid.Row="4" Margin="2,2" Content="+" Name="btn13" FontSize="26" FontWeight="Light" Background= "#f0f0f0" BorderBrush="#f0f0f0" Click="Button_Click" ></Button>
+            <Button Grid.Column="3" Grid.Row="3" Margin="2,2" Content="-" Name="btn14" FontSize="26" FontWeight="Light" Background= "#f0f0f0" BorderBrush="#f0f0f0" Click="Button_Click" ></Button>
+            <Button Grid.Column="3" Grid.Row="2" Margin="2,2" Content="x" Name="btn15" FontSize="26" FontWeight="Light" Background= "#f0f0f0" BorderBrush="#f0f0f0" Click="Button_Click"></Button>
+            <Button Grid.Column="0" Grid.Row="1" Margin="2,2" Content="CE" FontSize="20" Foreground="#2f2f2f" Background= "#f0f0f0" BorderBrush="#f0f0f0" Click="Button_Click_1"></Button>
+            <Button Grid.Column="1" Grid.Row="1" Margin="2,2" Content="C" Name ="btn16" FontSize="20"  Foreground="#2f2f2f" Background= "#f0f0f0" BorderBrush="#f0f0f0" Click="Button_Click"></Button>
+            <Button Grid.Column="2" Grid.Row="1" Margin="2,2" Content="⌫" Name="btn17" FontWeight="ExtraLight" FontSize="16" Background= "#f0f0f0" BorderBrush="#f0f0f0" Click="Button_Click"></Button>
+            <Button Grid.Column="3" Grid.Row="1" Margin="2,2" Content="÷" Name="btn18" FontSize="26" FontWeight="Light" Background= "#f0f0f0" BorderBrush="#f0f0f0" Click="Button_Click"></Button>
+            <Button Grid.Column="0" Grid.Row="0" Margin="2,2" Content="%" FontWeight="ExtraLight" FontSize="20" Background= "#f0f0f0" BorderBrush="#f0f0f0" Click="Button_Click_1"></Button>
+            <Button Grid.Column="1" Grid.Row="0" Margin="2,2" Content="✓" FontWeight="Light" FontSize="20" Background= "#f0f0f0" BorderBrush="#f0f0f0" Click="Button_Click_1"></Button>
+            <Button Grid.Column="2" Grid.Row="0" Margin="2,2" Content="𝑥²" FontWeight="UltraLight"  FontSize="20" Background= "#f0f0f0" BorderBrush="#f0f0f0" Click="Button_Click_1"></Button>
+            <Button Grid.Column="3" Grid.Row="0" Margin="2,2" Content="⅟𝑥" FontWeight="Light" FontSize="20" Background= "#f0f0f0" BorderBrush="#f0f0f0" Click="Button_Click_1"></Button>
+        </Grid>
+        <Grid Margin="0,120,0,350" Height="40" >
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Margin="2,2" Content="MC" FontWeight="DemiBold" Foreground="#cdcdcd" FontSize="16" Background= "#f0f0f0" BorderBrush="#f0f0f0" Click="Button_Click_1"></Button>
+            <Button Grid.Column="1" Margin="2,2" Content="MR" FontWeight="DemiBold" Foreground="#cdcdcd" FontSize="16" Background= "#f0f0f0" BorderBrush="#f0f0f0" Click="Button_Click_1"></Button>
+            <Button Grid.Column="2" Margin="2,2" Content="M+" FontWeight="DemiBold" FontSize="16" Background= "#f0f0f0" BorderBrush="#f0f0f0" Click="Button_Click_1"></Button>
+            <Button Grid.Column="3" Margin="2,2" Content="M-" FontWeight="DemiBold" FontSize="16" Background= "#f0f0f0" BorderBrush="#f0f0f0" Click="Button_Click_1"></Button>
+            <Button Grid.Column="4" Margin="2,2" Content="MS" FontWeight="DemiBold" FontSize="16" Background= "#f0f0f0" BorderBrush="#f0f0f0" Click="Button_Click_1"></Button>
+            <Button Grid.Column="5" Margin="2,2" Content="M⌄" FontWeight="DemiBold" Foreground="#cdcdcd" FontSize="16" Background= "#f0f0f0" BorderBrush="#f0f0f0" Click="Button_Click_1"></Button>
+        </Grid>
+        <Grid Height="50" Margin="0,0,0,510">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+                <ColumnDefinition Width="1*" ></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Content="☰" Grid.Column="0" Height="30" Width="40" Margin="2,5,8,5" Foreground="#555555" FontSize="20" Background= "#f0f0f0" BorderBrush="#f0f0f0" FontWeight="Light" Click="Button_Click_1" ></Button>
+            <Label Content="Standard" Grid.Column="1" FontSize="25" FontWeight="DemiBold" Margin="0,5" ></Label>
+            <Button Grid.Column="2" Background= "#f0f0f0" BorderBrush="#f0f0f0"  Height="30" Width="40" Click="Button_Click_1">
+                <Image Source="https://cdn-icons-png.flaticon.com/512/2989/2989831.png"></Image>
+            </Button>
+        </Grid>
+        <Label Content="0" Name="label1" Height="70" HorizontalAlignment="Right"  FontWeight="Bold" FontSize="35" Margin="0,80,0,410"></Label>
+    </Grid>
+</Window>
